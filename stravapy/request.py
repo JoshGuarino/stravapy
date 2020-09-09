@@ -1,8 +1,8 @@
 import requests
 
 class Request(object):
-    def get():
+    def get(headers):
         return
 
-    def post():
+    def post(headers):
         return
