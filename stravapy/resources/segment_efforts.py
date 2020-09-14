@@ -1,8 +1,9 @@
-class SegmentEfforts(object):
-    URL = '/segment_efforts'
+from request import Request
 
-    def get_efforts_by_segment_id(request):
+class SegmentEfforts(object):
+
+    def get_efforts_by_segment_id():
         return
 
-    def get_segment_effort_by_id(request):
+    def get_segment_effort_by_id():
         return

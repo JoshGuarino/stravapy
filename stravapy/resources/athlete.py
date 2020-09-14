@@ -1,14 +1,15 @@
+from request import Request
+
 class Athlete(object):
-    URL = '/athlete'
-
-    def get_logged_in_athlete(request):
+    
+    def get_logged_in_athlete():
         return
 
-    def get_logged_in_athlete_zones(request):
+    def get_logged_in_athlete_zones():
         return
 
-    def get_stats(request):
+    def get_stats():
         return
 
-    def update_logged_in_athlete(request):
+    def update_logged_in_athlete():
         return

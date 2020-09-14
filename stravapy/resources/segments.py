@@ -1,14 +1,15 @@
+from request import Request
+
 class Segments(object):
-    URL = '/segments'
 
-    def explore_segments(request):
+    def explore_segments():
         return
 
-    def get_logged_in_athlete_starred_segments(request):
+    def get_logged_in_athlete_starred_segments():
         return
 
-    def get_segment_by_id(request):
+    def get_segment_by_id():
         return
 
-    def star_segment(request):
+    def star_segment():
         return

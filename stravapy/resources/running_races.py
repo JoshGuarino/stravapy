@@ -1,8 +1,9 @@
-class RunningRaces(object):
-    URL = 'running_races'
+from request import Request
 
-    def get_running_race_by_id(request):
+class RunningRaces(object):
+
+    def get_running_race_by_id():
         return
 
-    def get_running_races(request):
+    def get_running_races():
         return

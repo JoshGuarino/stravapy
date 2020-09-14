@@ -16,3 +16,7 @@ class Request(object):
                 return response
         except requests.exceptions.HTTPError as error:
             raise SystemExit(error)
+
+    def test():
+        print('test2')
+        return 

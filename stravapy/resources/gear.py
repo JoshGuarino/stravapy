@@ -1,5 +1,6 @@
-class Gear(object):
-    URL = '/gear'
+from request import Request
 
-    def gear_by_id(request):
+class Gear(object):
+
+    def gear_by_id():
         return

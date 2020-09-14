@@ -1,8 +1,9 @@
-class Uploads(object):
-    URL = '/uploads'
+from request import Request
 
-    def create_upload(request):
+class Uploads(object):
+
+    def create_upload():
         return
 
-    def get_upload_by_id(request):
+    def get_upload_by_id():
         return
