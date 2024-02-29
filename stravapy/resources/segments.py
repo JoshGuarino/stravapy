@@ -1,4 +1,4 @@
-from request import Request
+from stravapy.request import Request
 
 class Segments(object):
 

@@ -1,6 +1,4 @@
-from resources import *
-from request import Request
-from oauth import Oauth
+from stravapy.resources import *
 
 class Stravapy:
     def __init__(self, access_token):

@@ -1,12 +1,12 @@
-from request import Request
+from stravapy.request import Request
 
 class Activities(object):
 
-    def create_activity(name, type, start_date_local, elapsed_time, description=None, distance=None, trainer=None, commute=None):
+    def create_activity(name: str, type, start_date_local, elapsed_time, description=None, distance=None, trainer=None, commute=None) -> None:
         Request.post()
         return
 
-    def get_activity_by_id(id, include_all_efforts=None):
+    def get_activity_by_id(id: int, include_all_efforts=False) -> None:
         Request.get()
         return
     
@@ -30,6 +30,6 @@ class Activities(object):
         Request.get()
         return
 
-    def update_activity_by_id(id):
+    def update_activity_by_id(id: int):
         Request.put()
         return
