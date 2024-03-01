@@ -1,6 +1,9 @@
 from stravapy.request import Request
 
-class Activities(object):
+class Activities:
+    def __init__(self, url, headers):
+            self.url = url
+            self.headers = headers
 
     def create_activity(name: str, type, start_date_local, elapsed_time, description=None, distance=None, trainer=None, commute=None) -> None:
         Request.post()
