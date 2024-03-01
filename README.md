@@ -1,1 +1,1 @@
-Stravapy is a python 3 wrapper for interacting with the Strava API v3.
+Stravapy is a python 3 sdk for interacting with the Strava API v3.
