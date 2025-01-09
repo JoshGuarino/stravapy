@@ -10,7 +10,6 @@ class Stravapy:
         self.clubs = clubs.Clubs(f'{self.base_url}/clubs', self.headers)
         self.gear = gear.Gear(f'{self.base_url}/gear', self.headers)
         self.routes = routes.Routes(f'{self.base_url}/routes', self.headers) 
-        self.running_races = running_races.RunningRaces #todo
         self.segment_efforts = segment_efforts.SegmentEfforts #todo
         self.segments = segments.Segments #todo
         self.streams = streams.Streams #todo

@@ -1,6 +1,6 @@
 from stravapy.request import Request
 
-class Routes(object):
+class Routes:
     def __init__(self, url: str, headers: dict):
         self.url = url
         self.headers = headers
