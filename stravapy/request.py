@@ -7,14 +7,14 @@ class Request:
         except requests.exceptions.HTTPError as error:
             raise SystemExit(error)
 
-    def post(self, url: str, headers: dict):
+    def post(self, url: str, headers: dict, data=None, json=None):
         try:
-            return requests.post(url=url, headers=headers)
+            return requests.post(url=url, headers=headers, data=data, json=json)
         except requests.exceptions.HTTPError as error:
             raise SystemExit(error)
 
-    def put(self, url: str, headers: dict):
+    def put(self, url: str, headers: dict, data=None):
         try:
-            return requests.put(url=url, headers=headers)
+            return requests.put(url=url, headers=headers, data=data)
         except requests.exceptions.HTTPError as error:
             raise SystemExit(error)

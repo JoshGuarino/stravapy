@@ -11,6 +11,6 @@ class Stravapy:
         self.gear = gear.Gear(f'{self.base_url}/gear', self.headers)
         self.routes = routes.Routes(f'{self.base_url}/routes', self.headers) 
         self.segment_efforts = segment_efforts.SegmentEfforts(f'{self.base_url}/segment_efforts', self.headers) 
-        self.segments = segments.Segments #todo
+        self.segments = segments.Segments(f'{self.base_url}/segments', self.headers)
         self.streams = streams.Streams #todo
         self.uploads = uploads.Uploads #todo
