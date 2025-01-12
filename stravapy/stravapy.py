@@ -5,7 +5,7 @@ class Stravapy:
         self.access_token = access_token
         self.base_url = 'https://www.strava.com/api/v3'
         self.headers = { 'Authorization' : f'Bearer {self.access_token}' }
-        self.activities = activities.Activities(f'{self.base_url}/activities', self.headers) #todo
+        self.activities = activities.Activities(f'{self.base_url}/activities', self.headers)
         self.athlete = athlete.Athlete(f'{self.base_url}/athlete', self.headers) 
         self.clubs = clubs.Clubs(f'{self.base_url}/clubs', self.headers)
         self.gear = gear.Gear(f'{self.base_url}/gear', self.headers)

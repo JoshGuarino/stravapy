@@ -1,5 +1,7 @@
+from stravapy.models.updatable_activity import UpdatableActivity
 from stravapy.request import Request
 from datetime import datetime
+from dataclasses import asdict
 
 class Activities:
     def __init__(self, url, headers):
@@ -34,10 +36,9 @@ class Activities:
         r = Request().get(f'{self.url}/{id}?include_all_efforts={include_all_efforts}', self.headers)
         return r.json()
     
-    # todo
-    def get_comments_by_activity_id(self):
-        Request().get(self.url, self.headers)
-        return
+    def get_comments_by_activity_id(self, id: int, page: int = 1, per_page: int = 30):
+        r = Request().get(f'{self.url}/{id}/comments?page={page}&per_page={per_page}', self.headers)
+        return r.json()
 
     def get_kudoers_by_activity_id(self, id: int, page: int = 1, per_page: int = 30):
         r = Request().get(f'{self.url}/{id}/kudos?page={page}&per_page={per_page}', self.headers)
@@ -51,7 +52,6 @@ class Activities:
         r = Request().get(f'{self.url}/{id}/zones', self.headers)
         return r.json()
 
-    #todo
-    def update_activity_by_id(self, id: int):
-        r = Request().put(f'{self.url}/{id}', self.headers)
+    def update_activity_by_id(self, id: int, updatable_activity: UpdatableActivity):
+        r = Request().put(f'{self.url}/{id}', self.headers, asdict(updatable_activity))
         return r.json()
