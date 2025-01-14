@@ -3,7 +3,6 @@ from . import athlete
 from . import clubs
 from . import gear
 from . import routes
-from . import running_races
 from . import segment_efforts
 from . import segments
 from . import streams
