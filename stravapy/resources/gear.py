@@ -1,4 +1,5 @@
 from stravapy.models.detailed_gear import DetailedGear
+from stravapy.models.fault import Fault
 from stravapy.request import Request
 
 class Gear:
@@ -6,6 +7,9 @@ class Gear:
         self.url = url
         self.headers = headers
 
-    def gear_by_id(self, id: str) -> DetailedGear:
+    def gear_by_id(self, id: str) -> DetailedGear | Fault:
         r = Request().get(f'{self.url}/gear/{id}', self.headers)
-        return DetailedGear(**r.json())
+        try:
+            return DetailedGear(**r.json())
+        except:
+            return Fault(**r.json())
