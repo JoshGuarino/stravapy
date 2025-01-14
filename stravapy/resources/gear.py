@@ -9,7 +9,7 @@ class Gear:
 
     def gear_by_id(self, id: str) -> DetailedGear | Fault:
         r = Request().get(f'{self.url}/gear/{id}', self.headers)
-        try:
+        if r.ok:
             return DetailedGear(**r.json())
-        except:
+        else:
             return Fault(**r.json())
