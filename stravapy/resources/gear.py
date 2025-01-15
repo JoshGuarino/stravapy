@@ -11,5 +11,4 @@ class Gear:
         r = Request().get(f'{self.url}/gear/{id}', self.headers)
         if r.ok:
             return DetailedGear(**r.json())
-        else:
-            return Fault(**r.json())
+        return Fault(**r.json())
