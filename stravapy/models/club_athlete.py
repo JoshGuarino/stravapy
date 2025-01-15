@@ -1,7 +1,6 @@
-from dataclasses import dataclass
+from typing import TypedDict
 
-@dataclass
-class ClubAthlete:
+class ClubAthlete(TypedDict):
     resource_state: int
     firstname: str
     lastname: str

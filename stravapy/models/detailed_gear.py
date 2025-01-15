@@ -1,7 +1,6 @@
-from dataclasses import dataclass 
+from typing import TypedDict 
 
-@dataclass
-class DetailedGear:
+class DetailedGear(TypedDict):
     id: str
     resource_state: int
     primary: bool

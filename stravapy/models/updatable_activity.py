@@ -1,7 +1,6 @@
-from dataclasses import dataclass
+from typing import TypedDict
 
-@dataclass
-class UpdatableActivity:
+class UpdatableActivity(TypedDict):
     commute: bool
     trainer: bool
     hide_from_home: bool

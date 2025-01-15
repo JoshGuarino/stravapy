@@ -1,7 +1,6 @@
-from dataclasses import dataclass
+from typing import TypedDict
 
-@dataclass
-class Error:
+class Error(TypedDict):
     code: str
     field: str
     resource: str

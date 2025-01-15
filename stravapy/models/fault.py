@@ -1,7 +1,6 @@
-from dataclasses import dataclass
+from typing import TypedDict
 from stravapy.models.error import Error
 
-@dataclass
-class Fault:
+class Fault(TypedDict):
     errors: list[Error]
     message: str
