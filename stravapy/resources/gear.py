@@ -1,5 +1,6 @@
 from stravapy.models.detailed_gear import DetailedGear
 from stravapy.models.fault import Fault
+from stravapy.models.response import ResponseDict
 from stravapy.request import Request
 
 class Gear:
@@ -7,8 +8,10 @@ class Gear:
         self.url = url
         self.headers = headers
 
-    def gear_by_id(self, id: str) -> DetailedGear | Fault:
+    def gear_by_id(self, id: str) -> ResponseDict[DetailedGear]:
         r = Request().get(f'{self.url}/gear/{id}', self.headers)
         if r.ok:
-            return DetailedGear(**r.json())
-        return Fault(**r.json())
+            data = DetailedGear(**r.json())
+            return ResponseDict(data=data, error=None) 
+        error = Fault(**r.json())
+        return ResponseDict(data=None, error=error) 
