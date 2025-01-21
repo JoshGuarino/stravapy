@@ -7,7 +7,6 @@ from stravapy.models.updatable_activity import UpdatableActivity
 from stravapy.models.detailed_activity import DetailedActivity
 from stravapy.request import Request
 from datetime import datetime
-from dataclasses import asdict
 
 class Activities:
     def __init__(self, url, headers):
