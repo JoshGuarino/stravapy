@@ -9,7 +9,7 @@ from stravapy.request import Request
 from datetime import datetime
 
 class Activities:
-    def __init__(self, url, headers):
+    def __init__(self, url: str, headers: dict):
             self.url = url
             self.headers = headers
 
